@@ -1,0 +1,74 @@
+2026-05-26T07:46:18.202+07:00  INFO 5624 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : Starting Ex01Application using Java 17.0.18 with PID 5624 (C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01\build\classes\java\main started by HP in C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01)
+2026-05-26T07:46:18.212+07:00  INFO 5624 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : No active profile set, falling back to 1 default profile: "default"
+2026-05-26T07:46:21.807+07:00  INFO 8052 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : Starting Ex01Application using Java 17.0.18 with PID 8052 (C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01\build\classes\java\main started by HP in C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01)
+2026-05-26T07:46:21.816+07:00  INFO 8052 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : No active profile set, falling back to 1 default profile: "default"
+2026-05-26T07:46:23.168+07:00  INFO 5624 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-26T07:46:23.169+07:00  INFO 5624 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-05-26T07:46:23.258+07:00  INFO 5624 --- [Ex01] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-26T07:46:24.657+07:00  INFO 8052 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-26T07:46:24.658+07:00  INFO 8052 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-05-26T07:46:24.667+07:00  INFO 5624 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-26T07:46:24.748+07:00  INFO 8052 --- [Ex01] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-26T07:46:25.614+07:00  INFO 5624 --- [Ex01] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@230e0cd8
+2026-05-26T07:46:25.618+07:00  INFO 5624 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-26T07:46:25.765+07:00  WARN 5624 --- [Ex01] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-26T07:46:26.019+07:00  INFO 8052 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-26T07:46:26.673+07:00  INFO 8052 --- [Ex01] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f43402b
+2026-05-26T07:46:26.677+07:00  INFO 8052 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-26T07:46:26.769+07:00  WARN 8052 --- [Ex01] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-26T07:46:28.353+07:00  WARN 5624 --- [Ex01] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-26T07:46:29.035+07:00  INFO 5624 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : Started Ex01Application in 12.484 seconds (process running for 13.671)
+2026-05-26T07:46:29.233+07:00  WARN 8052 --- [Ex01] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-26T07:46:29.728+07:00  WARN 8052 --- [Ex01] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-05-26T07:46:29.777+07:00  WARN 8052 --- [Ex01] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-05-26T07:46:29.783+07:00  INFO 8052 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-26T07:46:29.797+07:00  INFO 8052 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-26T07:46:29.893+07:00 ERROR 8052 --- [Ex01] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-05-26T07:48:06.308+07:00  INFO 18260 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : Starting Ex01Application using Java 17.0.18 with PID 18260 (C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01\build\classes\java\main started by HP in C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01)
+2026-05-26T07:48:06.310+07:00  INFO 18260 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : No active profile set, falling back to 1 default profile: "default"
+2026-05-26T07:48:07.630+07:00  INFO 18260 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-26T07:48:07.630+07:00  INFO 18260 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-05-26T07:48:07.679+07:00  INFO 18260 --- [Ex01] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-26T07:48:08.261+07:00  INFO 18260 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-26T07:48:08.581+07:00  INFO 18260 --- [Ex01] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63b76b78
+2026-05-26T07:48:08.583+07:00  INFO 18260 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-26T07:48:08.635+07:00  WARN 18260 --- [Ex01] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-26T07:48:09.982+07:00  WARN 18260 --- [Ex01] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-26T07:48:10.365+07:00  INFO 18260 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : Started Ex01Application in 4.55 seconds (process running for 5.448)
+2026-05-26T07:50:25.265+07:00  INFO 18260 --- [Ex01] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26T07:50:25.317+07:00  WARN 18260 --- [Ex01] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-05-26T07:50:37.701+07:00  INFO 18260 --- [Ex01] [http-nio-8080-exec-5] c.e.ex01.controller.CartController       : Received GET /api/cart/findByUserId request from user: U01
+2026-05-26T07:50:37.702+07:00  INFO 18260 --- [Ex01] [http-nio-8080-exec-5] c.example.ex01.service.CartItemService   : Fetching cart items for User: U01
+2026-05-26T07:50:53.208+07:00  INFO 18260 --- [Ex01] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-26T07:50:53.221+07:00  INFO 18260 --- [Ex01] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-26T07:51:07.754+07:00  INFO 2392 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : Starting Ex01Application using Java 17.0.18 with PID 2392 (C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01\build\classes\java\main started by HP in C:\Users\HP\OneDrive\Desktop\JAVA_WEB_SERVICE\Session10\Ex01)
+2026-05-26T07:51:07.759+07:00  INFO 2392 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : No active profile set, falling back to 1 default profile: "default"
+2026-05-26T07:51:10.920+07:00  INFO 2392 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-26T07:51:10.921+07:00  INFO 2392 --- [Ex01] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-05-26T07:51:11.012+07:00  INFO 2392 --- [Ex01] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-26T07:51:15.481+07:00  INFO 2392 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-26T07:51:16.508+07:00  INFO 2392 --- [Ex01] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a835864
+2026-05-26T07:51:16.515+07:00  INFO 2392 --- [Ex01] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-26T07:51:16.633+07:00  WARN 2392 --- [Ex01] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-26T07:51:20.381+07:00  WARN 2392 --- [Ex01] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-26T07:51:21.126+07:00  INFO 2392 --- [Ex01] [restartedMain] com.example.ex01.Ex01Application         : Started Ex01Application in 15.624 seconds (process running for 21.137)
+2026-05-26T07:51:21.744+07:00  INFO 2392 --- [Ex01] [restartedMain] com.example.ex01.config.DataSeeder       : Found 0 items in DB. Bắt đầu seed dữ liệu mẫu...
+2026-05-26T07:51:21.842+07:00  INFO 2392 --- [Ex01] [restartedMain] com.example.ex01.config.DataSeeder       : Seed dữ liệu mẫu thành công!
+2026-05-26T07:51:43.217+07:00  INFO 2392 --- [Ex01] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-26T07:51:43.275+07:00  INFO 2392 --- [Ex01] [http-nio-8080-exec-1] c.e.ex01.controller.CartController       : Received GET /api/cart/findByUserId request from user: U01
+2026-05-26T07:51:43.276+07:00  INFO 2392 --- [Ex01] [http-nio-8080-exec-1] c.example.ex01.service.CartItemService   : Fetching cart items for User: U01
+2026-05-26T07:51:49.314+07:00  INFO 2392 --- [Ex01] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-26T07:51:49.333+07:00  INFO 2392 --- [Ex01] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
