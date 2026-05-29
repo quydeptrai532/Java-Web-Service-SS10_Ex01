@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -16,33 +17,53 @@ public class CartItemService {
 
     private final CartItemRepository repository;
 
+    // LƯUỒNG CHÍNH: Cực kỳ trong sáng, đọc vào hiểu ngay đang làm gì
     public CartItem addCartItem(CartItemRequest request) {
         log.info("Processing add to cart - User: {}, Product: {}, Quantity: {}",
                 request.getUserId(), request.getProductId(), request.getQuantity());
 
-        CartItem item = repository.findByUserIdAndProductId(request.getUserId(), request.getProductId())
-                .map(existingItem -> {
-                    existingItem.setQuantity(existingItem.getQuantity() + request.getQuantity());
-                    log.info("Product {} already exists for user {}. Updating quantity to: {}",
-                            request.getProductId(), request.getUserId(), existingItem.getQuantity());
-                    return existingItem;
-                }).orElseGet(() -> {
-                    log.info("Product {} is new for user {}. Creating new cart entry.",
-                            request.getProductId(), request.getUserId());
-                    return CartItem.builder()
-                            .userId(request.getUserId())
-                            .productId(request.getProductId())
-                            .quantity(request.getQuantity())
-                            .build();
-                });
+        Optional<CartItem> existingItemOpt = repository.findByUserIdAndProductId(
+                request.getUserId(), request.getProductId()
+        );
 
-        CartItem savedItem = repository.save(item);
+        CartItem itemToSave;
+
+        if (existingItemOpt.isPresent()) {
+            itemToSave = updateExistingItem(existingItemOpt.get(), request.getQuantity());
+        } else {
+            itemToSave = createNewItem(request);
+        }
+
+        CartItem savedItem = repository.save(itemToSave);
         log.info("Successfully saved cart item with ID: {}", savedItem.getId());
+
         return savedItem;
     }
 
     public List<CartItem> getCartItemsByUserId(String userId) {
         log.info("Fetching cart items for User: {}", userId);
         return repository.findByUserId(userId);
+    }
+
+    // --- CÁC HÀM PHỤ TRỢ (HELPER METHODS) ---
+
+    private CartItem updateExistingItem(CartItem existingItem, Integer addedQuantity) {
+        existingItem.setQuantity(existingItem.getQuantity() + addedQuantity);
+
+        log.info("Product {} already exists for user {}. Updating quantity to: {}",
+                existingItem.getProductId(), existingItem.getUserId(), existingItem.getQuantity());
+
+        return existingItem;
+    }
+
+    private CartItem createNewItem(CartItemRequest request) {
+        log.info("Product {} is new for user {}. Creating new cart entry.",
+                request.getProductId(), request.getUserId());
+
+        return CartItem.builder()
+                .userId(request.getUserId())
+                .productId(request.getProductId())
+                .quantity(request.getQuantity())
+                .build();
     }
 }
